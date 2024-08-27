@@ -9,5 +9,10 @@ func main() {
 	pointerExamples()
 	arraysMapsExamples()
 	dataStructuresExamples()
+	port := 3000
+	retries := 3
+	// '_' is a write only variable, used to ignore the error return value
+	_, err := startWebServer(port, retries)
+	fmt.Println(port, err)
 
 }
